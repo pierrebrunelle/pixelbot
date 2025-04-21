@@ -374,7 +374,8 @@ def auth_callback():
             secure=True,       # Send only over HTTPS
             httponly=True,     # Prevent client-side JS access
             samesite="Lax",    # Mitigate CSRF
-            max_age=eight_hours_in_seconds # Set cookie to expire in 8 hours
+            max_age=eight_hours_in_seconds, # Set cookie to expire in 8 hours
+            domain="agent.pixeltable.com"
         )
         return response
 
