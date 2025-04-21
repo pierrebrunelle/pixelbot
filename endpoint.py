@@ -371,7 +371,7 @@ def auth_callback():
         response.set_cookie(
             "wos_session",
             auth_response.sealed_session,
-            secure=True,       # Send only over HTTPS
+            secure=False,       # Send only over HTTPS
             httponly=True,     # Prevent client-side JS access
             samesite="Lax",    # Mitigate CSRF
             max_age=eight_hours_in_seconds, # Set cookie to expire in 8 hours
